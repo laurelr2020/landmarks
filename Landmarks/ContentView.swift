@@ -10,19 +10,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading){
-            Text("Puppy of Bilbao")
-                .font(.title)
-                .foregroundColor(.red)
-            HStack {
-                Text("Guggenheim Museum")
-                    .font(.subheadline)
-                Spacer()
-                Text("Bilabo, Spain")
-                    .font(.subheadline)
+        VStack {
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 300)
+            
+            CircleImage()
+                .offset(y: -75)
+                .padding(.bottom, -75)
+            
+            VStack(alignment: .leading){
+                Text("Puppy of Bilbao")
+                    .font(.title)
+                    .foregroundColor(.red)
+                HStack {
+                    Text("Guggenheim Museum")
+                        .font(.subheadline)
+                    Spacer()
+                    Text("Bilabo, Spain")
+                        .font(.subheadline)
+                }
             }
+            .padding()
+            Spacer()
         }
-    .padding()
     }
 }
 

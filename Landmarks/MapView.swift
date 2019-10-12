@@ -10,13 +10,13 @@ import SwiftUI
 import MapKit
 
 struct MapView: UIViewRepresentable {
-    func makeUIView(context: UIViewRepresentableContext<MapView>) -> MapView.UIViewType {
+    func makeUIView(context: Context) -> MKMapView {
         MKMapView(frame: .zero)
     }
     
     func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
-        let coordinate = CLLocationCoordinate2D(latitude: 43.267659, longitude: -2.934524)
-        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.001)
+        let coordinate = CLLocationCoordinate2D(latitude: 43.267803, longitude: -2.934449)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         uiView.setRegion(region, animated: true)
     }
