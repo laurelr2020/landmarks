@@ -39,6 +39,6 @@ extension Landmark {
 }
 
 struct Coordinates: Hashable, Codeable {
-    var latidude: Double
+    var latitude: Double
     var longitude: Double
 }
