@@ -6,3 +6,5 @@ DerivedData/
 *.pbxuser
 xcuserdata/
 .DS_Store
+Pods/
+Podfile
